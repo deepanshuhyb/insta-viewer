@@ -12,9 +12,6 @@ function App() {
     setName(e.target.value);
     // console.log(name);
   }
-  const apiCall = (()=>{
-
-  })
 const options = {
 	method: 'GET',
 	headers: {
@@ -27,7 +24,7 @@ const Fetchdata = async (e) => {
   e.preventDefault();
   try {
     const response = await fetch(getURL(name), options);
-    const result = await response.text();
+    const result = await response.json();
     console.log(result);
   } catch (error) {
     console.error(error);
@@ -66,10 +63,12 @@ const Fetchdata = async (e) => {
             </div>
           <div id='resultArea' className='flex justify-around pt-16'>
             <button type="button" className=''>Stories</button>
+              <div>
+                      
+              </div>
             <button type="button" className=''>Profile Picture</button>
 
           </div>
-              <video className='h-80 w-76' autoPlay={true} src="https://scontent.cdninstagram.com/o1/v/t16/f2/m69/AQMWOVKRkomleMF0-YuchikXSEHo5iRZOcAtbzJ2SJovnNMNTro70aLierNmbccsfqNZE_7IoxTcsBCrTxvZgp4-.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uU1RPUlkuQzMuMTA4MC5kYXNoX2Jhc2VsaW5lXzEwODBwX3YxIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=106&strext=1&vs=d888b9600dc235be&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HREZhUFFmMDNMX3RFd2tLQUl2T3JqVnBlcjVIYnBSMUFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dFYnllQnRmcU1IWUhpTUhBT3hQU2c0cF9vWi1icGt3QUFBRhUCAsgBACgAGAAbAogHdXNlX29pbAExEnByb2dyZXNzaXZlX3JlY2lwZQExFQAAJraS2fPM0YwHFQIoAkMzLBdALgAAAAAAABgWZGFzaF9iYXNlbGluZV8xMDgwcF92MREAdegHAA&ccb=9-4&oh=00_AYC3NWHvtdiZKRaIM7Vc8USvaffhYI6Z6kCP2dbogEEtfA&oe=66F34663&_nc_sid=1d576d"></video>
         </div>
     </>
   );

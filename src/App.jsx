@@ -33,8 +33,8 @@ const Fetchdata = async (e) => {
   
   return (
     <>
-      <div className='h-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-between px-16 w-screen max-w-full'>
-          <div className='font-bold text-2xl px-16'>
+        <div className='h-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-between px-16 w-screen max-w-full'>
+         <div className='font-bold text-2xl px-16'>
             Instory
           </div>
           <div className='md:hidden' onClick={tap}>
@@ -51,8 +51,8 @@ const Fetchdata = async (e) => {
             <div className='flex justify-center'>
                 <form>
                   <label htmlFor=""><p className='flex justify-center font-sans-serif antialiased text-black text-2xl py-2 '>Enter UserName:</p>
-                    <div className='rounded-full h-12 w-96 bg-white flex items-center justify-center'>
-                      <input className=' h-8 w-80 outline-none' type="text" name="" id="" value={name} onChange={function demo(e){
+                    <div className='rounded-full h-12 md:w-96 bg-white flex items-center justify-center w-48'>
+                      <input className=' h-8 md:w-80 outline-none w-32' type="text" name="" id="" value={name} onChange={function demo(e){
                         return userInput(e);
                       }} />
                   <button type="submit" ><img src={searchBtn} alt="" className='h-8' onClick={Fetchdata}/></button>

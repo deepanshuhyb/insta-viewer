@@ -33,7 +33,7 @@ const Fetchdata = async (e) => {
   
   return (
     <>
-        <div className={`h-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-between px-16 w-screen max-w-full ${togglemenu ? 'px-1' : 'px-16'}`}>
+        <div className={`h-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-between md:px-16 w-screen max-w-full ${togglemenu ? 'px-1' : 'px-16'}`}>
          <div className={`font-bold text-2xl px-16 ${togglemenu ? 'px-0' : 'px-2'}`}>
             Instory
           </div>

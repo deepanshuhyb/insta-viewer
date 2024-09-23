@@ -33,7 +33,7 @@ const Fetchdata = async (e) => {
   
   return (
     <>
-        <div className={`h-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-between px-16 w-screen max-w-full ${togglemenu ? 'px-2' : 'px-16'}`}>
+        <div className={`h-16 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-between px-16 w-screen max-w-full ${togglemenu ? 'px-1' : 'px-16'}`}>
          <div className={`font-bold text-2xl px-16 ${togglemenu ? 'px-0' : 'px-2'}`}>
             Instory
           </div>
@@ -41,10 +41,10 @@ const Fetchdata = async (e) => {
             <img src={burgerIcon} alt="Menu Icon" className="w-6 h-6" />
           </div>
           <ul className={`flex md:flex ${togglemenu ? 'block' : 'hidden'} md:block`}>
-            <li className={`${togglemenu ? 'px-2' : 'px-4'}`}><a href="#">Home</a></li>
-            <li className={`${togglemenu ? 'px-2' : 'px-4'}`}><a href="#">Api</a></li>
-            <li className={`${togglemenu ? 'px-2' : 'px-4'}`}><a href="#">Contact</a></li>
-            <li className={`${togglemenu ? 'px-2' : 'px-4'}`}><a href="#">About</a></li>
+            <li className={`${togglemenu ? 'px-1' : 'px-4'}`}><a href="#">Home</a></li>
+            <li className={`${togglemenu ? 'px-1' : 'px-4'}`}><a href="#">Api</a></li>
+            <li className={`${togglemenu ? 'px-1' : 'px-4'}`}><a href="#">Contact</a></li>
+            <li className={`${togglemenu ? 'px-1' : 'px-4'}`}><a href="#">About</a></li>
           </ul>
         </div>
         <div className='flex flex-col h-dvh bg-gradient-to-r from-violet-500 to-pink-700'>

@@ -10,7 +10,7 @@ function GetRez ({ links }) {
             {link['video_versions'].map((video, index) => {
               console.log(video.url);
               return index === 0 ? (
-                <video src={video?.url} key={video.url} controls className='rounded-lg h-72 md:h-96'></video>
+                <video src={video?.url} key={video.url} controls className='rounded-lg h-80 w-48 md:h-96'></video>
               ) : null
             })}
           </>
@@ -20,7 +20,7 @@ function GetRez ({ links }) {
             link['image_versions2']['candidates'].map((image,index) => {
               console.log(image.url);
                 return index === 0 ? (
-                    <img src={image.url} alt='' key={image.url} className='rounded-lg h-72 md:h-96' />
+                    <img src={image.url} alt='' key={image.url} className='rounded-lg h-80 w-48 md:h-96' />
                 ): null
             })
           }

@@ -81,7 +81,16 @@ function App () {
             </li>
           </ul>
         </div>
-        <div className='flex flex-col h-auto bg-gradient-to-r from-violet-500 to-pink-700'>
+        <div className='flex flex-col h-auto bg-gradient-to-r from-pink-400 to-violet-400'>
+          {/* <video
+            className='absolute top-0 left-0 w-full h-full object-cover'
+            autoPlay
+            muted
+            loop
+          >
+            <source src='/assets/video/bgweb.mp4' type='video/mp4' />
+            Your browser does not support the video tag.
+          </video> */}
           <div className='flex justify-center'>
             <form onSubmit={Fetchdata}>
               <label htmlFor=''>
@@ -111,13 +120,24 @@ function App () {
               </label>
             </form>
           </div>
-          <div id='resultArea' className='flex flex-col items-center pt-16 min-h-screen'>
+          <div
+            id='resultArea'
+            className='flex flex-col items-center pt-16 min-h-screen'
+          >
             <h1 className=''>Stories for {name}</h1>
             <div className='px-16'>
               <GetRez links={res} />
             </div>
           </div>
         </div>
+        <footer className='h-16 bg-black flex justify-center'>
+                    <h4 className='text-white pt-8 flex gap-x-4'>
+                      Made by deepanshu.
+                      <a href="https://github.com/deepanshuhyb" target='_blank'>
+                        <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt="" className=' rounded-full h-8 w-8' />
+                      </a>
+                    </h4>
+        </footer>
       </div>
     </>
   )

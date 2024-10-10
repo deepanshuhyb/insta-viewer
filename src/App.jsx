@@ -88,7 +88,7 @@ function App () {
                 <p className='font-serif flex justify-center font-sans-serif text-zinc-900 antialiased drop-shadow-2xl md:text-2xl py-2'>
                   Enter UserName:
                 </p>
-                <div className='rounded-full md:h-12 md:w-96 bg-white flex items-center justify-center w-48'>
+                <div className='rounded-full md:h-12 md:w-96 bg-white flex items-center justify-center w-48 border-4 hover:border-slate-700'>
                   <input
                     className=' h-8 md:w-80 outline-none w-32'
                     type='text'

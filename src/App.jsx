@@ -83,15 +83,6 @@ function App () {
           </ul>
         </div>
         <div className='flex flex-col h-auto bg-gradient-to-r from-pink-400 to-violet-400'>
-          {/* <video
-            className='absolute top-0 left-0 w-full h-full object-cover'
-            autoPlay
-            muted
-            loop
-          >
-            <source src='/assets/video/bgweb.mp4' type='video/mp4' />
-            Your browser does not support the video tag.
-          </video> */}
           <div className='flex justify-center'>
             <form onSubmit={Fetchdata}>
               <label htmlFor=''>

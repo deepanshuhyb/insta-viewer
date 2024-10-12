@@ -10,7 +10,7 @@ function GetRez ({ links }) {
             {link['video_versions'].map((video, index) => {
               console.log(video.url);
               return index === 0 ? (
-                <video src={video?.url} key={video.url} controls className='rounded-lg h-80 w-48 md:h-96'></video>
+                <video src={video?.url} key={video.url} controls className='rounded-lg w-48'></video>
               ) : null
             })}
           </>

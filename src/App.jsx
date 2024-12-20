@@ -37,7 +37,7 @@ function App () {
       const response = await fetch(getURL(name), options)
       const results = await response.json()
       console.log(results)
-      if(results.stories.result.isArray()){
+      if(results?.stories.isArray()){
         setres(results.stories.result)
       }else{
         setres([])

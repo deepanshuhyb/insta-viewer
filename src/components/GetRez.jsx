@@ -5,9 +5,9 @@ function GetRez ({ links }) {
   return (
     <div className='grid grid-cols-1  md:grid-cols-4 gap-4 py-10 h-fit md:gap-16'>
       {links.map(link => {
-        return !link['video']? (
+        return !link['video']=== false? (
           <>
-              <video src={link?.video} key={link.video} controls className='rounded-lg w-48'></video>
+              <video src={link?.video} key={link.video} controls className='rounded-lg w-48 h-80'></video>
             {/* {link['video'].map((video, index) => {
               console.log(video.url);
               return index === 0 ? (

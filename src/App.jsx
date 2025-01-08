@@ -38,8 +38,8 @@ function App () {
       const results = await response.json()
       console.log(results)
       setTimeout(function result() {
-        if(results?.stories.result.isArray()){
-          setres(results.stories.result)
+        if(results?.stories.isArray()){
+          setres(results.stories)
         }else{
           setres([])
         }

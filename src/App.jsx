@@ -38,7 +38,7 @@ function App () {
       const results = await response.json()
       console.log(results)
       setTimeout(function result() {
-        if(results?.stories.isArray()){
+        if(results?.stories.length != 0){
           setres(results.stories)
         }else{
           setres([])

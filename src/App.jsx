@@ -37,11 +37,15 @@ function App () {
       const response = await fetch(getURL(name), options)
       const results = await response.json()
       console.log(results)
-      if(results?.stories.result.isArray()){
-        setres(results.stories.result)
-      }else{
-        setres([])
-      }
+      setTimeout(function result() {
+        if(results?.stories.result.isArray()){
+          setres(results.stories.result)
+        }else{
+          setres([])
+        }
+      },5000)
+
+
       // console.log(res)
       // res.map(l => console.log(l))
     } catch (error) {

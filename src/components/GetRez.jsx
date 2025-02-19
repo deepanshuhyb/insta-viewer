@@ -36,7 +36,7 @@ function GetRez({ links, info }) {
 
   return (
     <div className="py-10 flex flex-col items-center">
-      {!loading && info && <ProfileCard info={info} />}
+      {<ProfileCard info={info} />}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 mt-6">
         {loading
           ? Array(4).fill(0).map((_, i) => <Skeleton key={i} />)

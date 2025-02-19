@@ -8,15 +8,24 @@ function Skeleton() {
   );
 }
 
-function ProfileCard({ info }) {
+function ProfileCard({ info = {} }) {  // Default to empty object
   return (
     <div className="flex flex-col items-center p-4 bg-white shadow-md rounded-lg">
-      <img src={info.dp} alt="Profile" className="w-20 h-20 rounded-full border" />
-      <h2 className="text-lg font-semibold mt-2">{info.fullName}</h2>
-      {info.biography && <p className="text-gray-600 text-sm mt-1">{info.biography}</p>}
+      <img
+        src={info.dp || "https://via.placeholder.com/100"} // Default image
+        alt="Profile"
+        className="w-20 h-20 rounded-full border"
+      />
+      <h2 className="text-lg font-semibold mt-2">{info.fullName || "Unknown"}</h2>
+      {info.biography ? (
+        <p className="text-gray-600 text-sm mt-1">{info.biography}</p>
+      ) : (
+        <p className="text-gray-400 text-sm mt-1">No bio available</p>
+      )}
     </div>
   );
 }
+
 
 function GetRez({ links, info }) {
   const [loading, setLoading] = useState(true);

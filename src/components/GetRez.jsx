@@ -26,7 +26,7 @@ function ProfileCard({ info = {} }) {
   );
 }
 
-function GetRez({ links, info }) {
+function GetRez({ links, info = {} }) { // Default `info` to an empty object
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function GetRez({ links, info }) {
 
   return (
     <div className="py-10 flex flex-col items-center">
-      {info && <ProfileCard info={info} />}
+      <ProfileCard info={info} /> {/* Always renders */}
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 mt-6">
           {Array(4).fill(0).map((_, i) => <Skeleton key={i} />)}
@@ -58,5 +58,3 @@ function GetRez({ links, info }) {
     </div>
   );
 }
-
-export default GetRez;

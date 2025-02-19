@@ -9,7 +9,6 @@ function Skeleton() {
 }
 
 function ProfileCard({ info = {} }) {
-  if (!info.dp && !info.fullName && !info.biography) return null; // Prevent rendering if no valid data
   return (
     <div className="flex flex-col items-center p-4 bg-white shadow-md rounded-lg">
       <img
@@ -36,20 +35,26 @@ function GetRez({ links, info }) {
 
   return (
     <div className="py-10 flex flex-col items-center">
-      {!loading && info && <ProfileCard info={info} />}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 mt-6">
-        {loading
-          ? Array(4).fill(0).map((_, i) => <Skeleton key={i} />)
-          : links.map((link, index) => (
-              <div key={index} className="flex flex-col items-center">
-                {link.video ? (
-                  <video src={link.video} controls className="rounded-lg w-48 h-80" />
-                ) : link.image ? (
-                  <img src={link.image} alt="Content" className="rounded-lg h-80 w-48 md:h-96" />
-                ) : null}
-              </div>
-            ))}
-      </div>
+      {info && <ProfileCard info={info} />}
+      {loading ? (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 mt-6">
+          {Array(4).fill(0).map((_, i) => <Skeleton key={i} />)}
+        </div>
+      ) : links.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 mt-6">
+          {links.map((link, index) => (
+            <div key={index} className="flex flex-col items-center">
+              {link.video ? (
+                <video src={link.video} controls className="rounded-lg w-48 h-80" />
+              ) : link.image ? (
+                <img src={link.image} alt="Content" className="rounded-lg h-80 w-48 md:h-96" />
+              ) : null}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-500 mt-6">No stories available.</p>
+      )}
     </div>
   );
 }

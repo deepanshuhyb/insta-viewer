@@ -8,8 +8,7 @@ function Skeleton() {
   );
 }
 
-function ProfileCard({ info = {} }) {
-  if (!info.dp && !info.fullName && !info.biography) return null; // Prevent rendering if no valid data
+function ProfileCard({ info = {} }) {  // Default to empty object
   return (
     <div className="flex flex-col items-center p-4 bg-white shadow-md rounded-lg">
       <img
@@ -26,6 +25,7 @@ function ProfileCard({ info = {} }) {
     </div>
   );
 }
+
 
 function GetRez({ links, info }) {
   const [loading, setLoading] = useState(true);

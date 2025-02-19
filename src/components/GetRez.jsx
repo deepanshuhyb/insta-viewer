@@ -8,7 +8,8 @@ function Skeleton() {
   );
 }
 
-function ProfileCard({ info = {} }) {  // Default to empty object
+function ProfileCard({ info = {} }) {
+  if (!info.dp && !info.fullName && !info.biography) return null; // Prevent rendering if no valid data
   return (
     <div className="flex flex-col items-center p-4 bg-white shadow-md rounded-lg">
       <img
@@ -26,17 +27,16 @@ function ProfileCard({ info = {} }) {  // Default to empty object
   );
 }
 
-
 function GetRez({ links, info }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000); 
+    setTimeout(() => setLoading(false), 1000); // Simulated loading time
   }, []);
 
   return (
     <div className="py-10 flex flex-col items-center">
-      <ProfileCard info={info} />
+      {!loading && info && <ProfileCard info={info} />}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 mt-6">
         {loading
           ? Array(4).fill(0).map((_, i) => <Skeleton key={i} />)
